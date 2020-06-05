@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 
 <title>Header</title>
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <style type="text/css" >
@@ -73,7 +80,7 @@
 		float:left; width:40%; height:32px;
 	}
 	
-	#tag  a {
+	#tag  span {
 		line-height:32px;
 		font-family:楷体 ;
 		font-size:16px;  
@@ -81,10 +88,11 @@
 		font-weight: 700; 
 	}
 	#logo {
-		border-radius:10px; 
+		border-radius:50%; 
 		width:20px; 
 		height:20px; 
-		padding-top:6px;"
+		padding-top:px;
+		
 	}
 	
 	#menu {
@@ -114,7 +122,7 @@
 	
 	#menu > ul >li:hover {
 		transform:scale(1.25,1.25 ) ;
-		color:#00BFFF ;
+		color:black ;
 		text-decoration: underline ;
 	}
 	
@@ -134,7 +142,7 @@
 		width:100%; height:290px;
 	}
 	.top_box {
-		width:950px; height:100%; margin:0 auto;  position:relative; border-bottom:0.5px solid #87CEFA ; 
+		width:1100px; height:100%; margin:0 auto;  position:relative; border-bottom:0.5px solid #87CEFA ; 
 		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/web/topimg.jpg) ; */
 		background-repeat:round;
 		
@@ -150,15 +158,15 @@
 	
 	#focus:hover {
 		transform:scale(1.25,1.25 ) ;
-		color:#00BFFF ; 
+		color:black ; 
 	}
 	#owner:hover {
 		transform:scale(1.25,1.25 ) ;
-		color:#00BFFF ; 
+		color:black ; 
 	}
 	#guestbook:hover {
 		transform:scale(1.25,1.25 ) ;
-		color:#00BFFF ; 
+		color:black ; 
 	}
 	
 	.top_menu_split {
@@ -169,23 +177,35 @@
 		font-weight:700 ; 
 	}
 	
+	/*留言组件样式*/
 	input::-webkit-input-placeholder { 
-　　	color:#bbb;font-size:10px;
+　　	color:#bbb;
+		font-size:10px;
 　　}
+
 	textarea::-webkit-input-placeholder { 
 　　	color:#bbb;
 		font-size:10px;
 　　}
 	
+	#showmore {
+		padding-top:10px;
+		font-size:10px;
+	}
+	#showmore:hover {
+		text-decoration: underline ;
+		color:#aaa ;
+	}
+	
 </style>
 <body >
 	<div id="header" class="header_box">
-		<div style="width:950px; height:100%; margin:0 auto;">
+		<div style="width:1100px; height:100%; margin:0 auto;">
 			<div id="tag">
 				
-				<div style="height:32px; float:left ;"><a>南国晚秋</a></div>
-				<div style="width:32px; float:left ; ">
-					<img id="logo" src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\logo.jpg"/> </a>
+				<div style="height:32px; float:left ;"><span>南国晚秋</span></div>
+				<div style="width:32px; height:32px; float:left; padding-top:4px;">
+					<img id="logo" src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\logo.jpg" /> 
 				</div>
 			</div>
 			
@@ -235,64 +255,59 @@
 			<!-- 扩展资料显示区域显示框 -->
 			<div style="width:450px; height:290px;  float:right; ">
 				<!-- "关于我"显示区域 -->
-				<div style="display:none;">
+				<div style="display:;">
 					<div style="border-bottom:0.5px solid #eee; padding-bottom:5px;">
-						<p style="color:#00BFFF; font-size:11px; font-weight:600; line-height:2.5em;">
+						<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-							<a>站长简介</a>
+							<span>站长简介</span>
 						</p>
-						<p style="font-size:10px; line-height:2em;">昵称：南国晚秋</p>
-						<p style="font-size:10px; line-height:2em;">职业：全栈开发工程师、Salesforce开发工程师</p>
-						<p style="font-size:10px; line-height:2em;">邮箱：1948556024@qq.com</p>
-						<p style="font-size:10px; line-height:2em;">籍贯：四川宜宾</p>
-						<p style="font-size:10px; line-height:2em;">抖音：www.fanchaojian.com</p>
-						<p style="font-size:10px; line-height:2em;">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
-						<p style="font-size:10px; line-height:2em;">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
+						<p style="font-size:10px; ">昵称：南国晚秋</p>
+						<p style="font-size:10px; ">职业：全栈开发工程师、Salesforce开发工程师</p>
+						<p style="font-size:10px; ">邮箱：1948556024@qq.com</p>
+						<p style="font-size:10px; ">籍贯：四川宜宾</p>
+						<p style="font-size:10px; ">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
+						<p style="font-size:10px; ">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
 					</div>
 					
 					<div>
-						<p style="color:#00BFFF; font-size:11px; font-weight:600; line-height:2.5em;">
+						<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-							<a>网站简介</a>
+							<span>网站简介</span>
 						</p>
-						<p style="font-size:10px; line-height:2em;">前端：CSS+HTML5+VUE</p>
-						<p style="font-size:10px; line-height:2em;">后端：java/Struts2+Hibernate+Spring/MySql</p>
-						<p style="font-size:10px; line-height:2em;">缓存：Redis</p>
+						<p style="font-size:10px; ">前端：CSS+HTML5+VUE</p>
+						<p style="font-size:10px; ">后端：java/Struts2+Hibernate+Spring/MySql</p>
 					</div>
 					
-					<p style="font-size:10px; line-height:2em; text-decoration: underline; color:#FF7F50;">查看更多...</p>
+					<p style="font-size:10px;  text-decoration: underline; color:#FF7F50;">查看更多...</p>
 				</div>
 				
 				
 				<!-- "留言板"显示区域 -->
 				<div style="display:;">
-					<p style="color:#00BFFF; font-size:11px; font-weight:600; line-height:2.5em;">
+					<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
 						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-						<a>写下你的留言，说不定我会回复你呢。</a>
+						<span>写下你的留言，说不定我会回呢。</span>
 					</p>
 					
-					<div style="height:28px; width:300px; margin-top:10px;">
-						<div style="float:left; width:25px; height:25px; border:1px solid #aaa;"></div>
-						<input type="text" placeholder="你的邮箱" style="height:23px; width:200px;" />
+					<div class="form-group">
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="邮箱" style="height:25px; width:200px;">
 					</div>
 					
-					<div style="height:28px; width:300px; margin-top:10px;">
-						<div style="float:left; width:25px; height:25px; border:1px solid #aaa;"></div>
-						<input type="text" placeholder="你的网站" style="height:23px; width:200px;" />
+					<div class="form-group">
+						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="你的网址" style="height:25px; width:200px;">
 					</div>
 					
-					<textarea rows="6" cols="60" placeholder="说点什么吧" style="margin-top:10px; border-radius:5px;"></textarea>
-					
-					<div style="height:28px; width:300px; margin-top:10px;">
-						<div style="float:left; width:25px; height:25px; border:1px solid #aaa;"></div>
-						<div style="float:left;"><input type="text" placeholder="验证码" style="height:23px; width:60px;" /> </div>
-						<div style="float:left; width:40px; height:25px; border:1px solid #aaa;">4960</div>
-					</div>
+					<textarea class="form-control" placeholder="说点什么吧" rows="3"></textarea>
 					
 					<div style="width:80px; height:25px; border:1px solid #bbb; border-radius:5px; margin-top:10px; text-align:center;">
-						<a style="line-height:25px; font-size:12px; color:#FF7F50;">提交留言</a>
+						<span style="line-height:25px; font-size:12px; color:#FF7F50; ">提交留言</span>
 					</div>
+					
+					<div id="showmore" class="fc2">查看更多...</div>
 				</div>
+				
+				
+				 
 				
 			</div>
 			
