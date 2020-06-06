@@ -43,6 +43,7 @@
 		font-family:微软雅黑,黑体;
 	}
 	
+	
 	.fs1 {
 		font-size:12px;
 	}
@@ -143,7 +144,7 @@
 	}
 	.top_box {
 		width:1100px; height:100%; margin:0 auto;  position:relative; border-bottom:0.5px solid #87CEFA ; 
-		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/web/topimg.jpg) ; */
+		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/FanBlog_static/imgs/topimg.jpg) ;  */
 		background-repeat:round;
 		
 	}
@@ -177,16 +178,19 @@
 		font-weight:700 ; 
 	}
 	
-	/*留言组件样式*/
+	/*留言、关于 组件样式*/
 	input::-webkit-input-placeholder { 
 　　	color:#bbb;
 		font-size:10px;
+		
 　　}
 
 	textarea::-webkit-input-placeholder { 
 　　	color:#bbb;
 		font-size:10px;
 　　}
+	
+	
 	
 	#showmore {
 		padding-top:10px;
@@ -196,6 +200,15 @@
 		text-decoration: underline ;
 		color:#aaa ;
 	}
+	
+	.fs0 {
+		font-size:10px;
+	}
+	
+	.title {
+		color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;
+	}
+	
 	
 </style>
 <body >
@@ -244,11 +257,11 @@
 			<!--菜单显示位置-->
 			<div class="menu_box" style="">
 				<div style="padding-left:10px;">
-					<div id="focus" class="top_menu fw fc2">留言</div>
+					<div id="focus" class="top_menu fw fc2">关注</div>
 					<div class="top_menu_split">|</div>
-					<div id="guestbook" class="top_menu fw fc2">关注博主</div>
+					<div id="guestbook" class="top_menu fw fc2">关于博主</div>
 					<div class="top_menu_split">|</div>
-					<div id="owner" class="top_menu fw fc2">关于我</div>
+					<div id="owner" class="top_menu fw fc2">留言</div>
 				</div>
 			</div>
 			
@@ -256,35 +269,35 @@
 			<div style="width:450px; height:290px;  float:right; ">
 				<!-- "关于我"显示区域 -->
 				<div style="display:;">
-					<div style="border-bottom:0.5px solid #eee; padding-bottom:5px;">
-						<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
+					<div style="border-bottom:0.5px solid #eee;">
+						<p class="title" style="">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 							<span>站长简介</span>
 						</p>
-						<p style="font-size:10px; ">昵称：南国晚秋</p>
-						<p style="font-size:10px; ">职业：全栈开发工程师、Salesforce开发工程师</p>
-						<p style="font-size:10px; ">邮箱：1948556024@qq.com</p>
-						<p style="font-size:10px; ">籍贯：四川宜宾</p>
-						<p style="font-size:10px; ">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
-						<p style="font-size:10px; ">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
+						<p class="fs0">昵称：南国晚秋</p>
+						<p class="fs0">职业：全栈开发工程师、Salesforce开发工程师</p>
+						<p class="fs0">邮箱：1948556024@qq.com</p>
+						<p class="fs0">籍贯：四川宜宾</p>
+						<p class="fs0">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
+						<p class="fs0">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
 					</div>
 					
 					<div>
-						<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
+						<p class="title" style="">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 							<span>网站简介</span>
 						</p>
-						<p style="font-size:10px; ">前端：CSS+HTML5+VUE</p>
-						<p style="font-size:10px; ">后端：java/Struts2+Hibernate+Spring/MySql</p>
+						<p class="fs0">前端：CSS+HTML5+VUE</p>
+						<p class="fs0">后端：java/Struts2+Hibernate+Spring/MySql</p>
 					</div>
 					
-					<p style="font-size:10px;  text-decoration: underline; color:#FF7F50;">查看更多...</p>
+					<div id="showmore" class="fc2" style="padding-top:0;">查看更多...</div>
 				</div>
 				
 				
 				<!-- "留言板"显示区域 -->
 				<div style="display:;">
-					<p style="color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;">
+					<p class="title" style="">
 						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 						<span>写下你的留言，说不定我会回呢。</span>
 					</p>
@@ -297,17 +310,19 @@
 						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="你的网址" style="height:25px; width:200px;">
 					</div>
 					
-					<textarea class="form-control" placeholder="说点什么吧" rows="3"></textarea>
+					<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:350px;"></textarea>
 					
-					<div style="width:80px; height:25px; border:1px solid #bbb; border-radius:5px; margin-top:10px; text-align:center;">
-						<span style="line-height:25px; font-size:12px; color:#FF7F50; ">提交留言</span>
-					</div>
+					<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
 					
-					<div id="showmore" class="fc2">查看更多...</div>
+					<div id="showmore" class="fc2">留言板</div>
 				</div>
 				
 				
-				 
+				 <!-- "关注博主"显示区域 -->
+				 <div style="display: ;">
+					
+						
+				 </div>
 				
 			</div>
 			
