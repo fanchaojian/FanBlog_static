@@ -210,6 +210,27 @@
 	}
 	
 	
+	/*关注 组件 部分样式 */ 
+	
+	#focus_box {
+		width:235px; height:290px; border:1px solid #ccc; overflow:hidden;
+	}
+	
+	#focus_title_box {
+		width:100%; height:30px; border-bottom:1px solid #ccc;
+	}
+	
+	#focus_item_box {
+		width:100%; height:80px; border-bottom:1px solid #ccc;
+	}
+	
+	.focus_list {
+		width:25%; height:100%; float:left; margin-top:5px; text-align:center;
+	}
+	
+	.focus_item {
+		width:40px; height:40px; border-radius:50%; border:1px solid #ccc; margin:0 auto;
+	}
 </style>
 <body >
 	<div id="header" class="header_box">
@@ -268,7 +289,7 @@
 			<!-- 扩展资料显示区域显示框 -->
 			<div style="width:450px; height:290px;  float:right; ">
 				<!-- "关于我"显示区域 -->
-				<div style="display:;">
+				<div style="display:none;">
 					<div style="border-bottom:0.5px solid #eee;">
 						<p class="title" style="">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
@@ -296,18 +317,18 @@
 				
 				
 				<!-- "留言板"显示区域 -->
-				<div style="display:;">
+				<div style="display:none;">
 					<p class="title" style="">
 						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 						<span>写下你的留言，说不定我会回呢。</span>
 					</p>
 					
 					<div class="form-group">
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="邮箱" style="height:25px; width:200px;">
+						<input type="text" class="form-control" placeholder="邮箱" style="height:25px; width:200px;">
 					</div>
 					
 					<div class="form-group">
-						<input type="text" class="form-control" id="exampleInputEmail1" placeholder="你的网址" style="height:25px; width:200px;">
+						<input type="text" class="form-control"  placeholder="你的网址" style="height:25px; width:200px;">
 					</div>
 					
 					<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:350px;"></textarea>
@@ -320,7 +341,30 @@
 				
 				 <!-- "关注博主"显示区域 -->
 				 <div style="display: ;">
-					
+					<div id="focus_box" style="">
+						<div id="focus_title_box" style="">
+							<span class="title" style="line-height:30px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
+						</div>
+						
+						<div id="focus_item_box" style="">
+							<div class="focus_list" style="">
+								<div class="focus_item" style=""></div>
+								<p class="fs1" style="padding-top:5px;">QQ</p>
+							</div>
+							<div class="focus_list" style="">
+								<div class="focus_item" style=""></div>
+								<p class="fs1" style="padding-top:5px;">微博</p>
+							</div>
+							<div class="focus_list" style="">
+								<div class="focus_item" style=""></div>
+								<p class="fs1" style="padding-top:5px;">GitHub</p>
+							</div>
+							<div class="focus_list" style="">
+								<div class="focus_item" style=""></div>
+								<p class="fs1" style="padding-top:5px;">公众号</p>
+							</div>
+						</div>
+					</div>
 						
 				 </div>
 				
@@ -328,6 +372,22 @@
 			
 		</div>
 		
+	</div>
+	
+	<!--blog最新文章显示界面-->
+	<div id="newBlogList" style="width:100%; height:800px; margin-bottom:100px;">
+		<!-- 外壳 -->
+		<div style="width:1100px; height:100%; margin:0 auto; ">
+			<!-- 左边 -->
+			<div style="width:715px; height:100%; float:left; border-right:1px solid #ccc; padding:10px;">
+				<p>这是我的右边主要的盒子，主要用来显示最新的博客文章刘</p>
+			</div>
+			
+			<!-- 右边 -->
+			<div style="width:380px; height:100%; float:right;  padding:10px;">
+				<p>这是我的小功能，快捷操作的地方。</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
