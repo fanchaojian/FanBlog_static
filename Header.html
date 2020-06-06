@@ -119,6 +119,7 @@
 		text-align:center;
 		color:#FF7F50 ;
 		font-weight: 700; 
+		transition:transform 0.5s ;
 	}
 	
 	#menu > ul >li:hover {
@@ -155,20 +156,16 @@
 	
 	.top_menu {
 		float:left; color:FF7F50; font-size:14px; font-family:宋体;  line-height:50px; 
+		transition:all 0.5s ;
 	}
 	
-	#focus:hover {
+	
+	.top_menu:hover {
 		transform:scale(1.25,1.25 ) ;
 		color:black ; 
+		text-decoration: underline ;
 	}
-	#owner:hover {
-		transform:scale(1.25,1.25 ) ;
-		color:black ; 
-	}
-	#guestbook:hover {
-		transform:scale(1.25,1.25 ) ;
-		color:black ; 
-	}
+
 	
 	.top_menu_split {
 		float:left; font-size:14px; width:20px; text-align:center; line-height:50px;
@@ -213,24 +210,42 @@
 	/*关注 组件 部分样式 */ 
 	
 	#focus_box {
-		width:235px; height:290px; border:1px solid #ccc; overflow:hidden;
+		width:235px; height:290px;  overflow:hidden;
 	}
 	
 	#focus_title_box {
-		width:100%; height:30px; border-bottom:1px solid #ccc;
+		width:100%; height:30px; 
 	}
 	
 	#focus_item_box {
-		width:100%; height:80px; border-bottom:1px solid #ccc;
+		width:100%; height:80px; 
 	}
 	
 	.focus_list {
 		width:25%; height:100%; float:left; margin-top:5px; text-align:center;
+		
 	}
+	
 	
 	.focus_item {
 		width:40px; height:40px; border-radius:50%; border:1px solid #ccc; margin:0 auto;
+		transition:transform 0.25s ;
 	}
+	.focus_item:hover {
+		transform:scale(1.2,1.2) ;
+	}
+	
+	#headimg {
+		width:50px; height:50px; border-radius:50%; border:1px solid #ccc; margin:0 auto; box-shadow:0px 0px 3px red;
+		transition: all 1s ; 
+	}
+	
+	#headimg:hover {
+		transform:scale(1.2,1.2) rotate(180deg) ;
+		
+	}
+	
+	
 </style>
 <body >
 	<div id="header" class="header_box">
@@ -239,7 +254,7 @@
 				
 				<div style="height:32px; float:left ;"><span>南国晚秋</span></div>
 				<div style="width:32px; height:32px; float:left; padding-top:4px;">
-					<img id="logo" src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\logo.jpg" /> 
+					<img id="logo" src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\headimg.jpg" /> 
 				</div>
 			</div>
 			
@@ -287,9 +302,9 @@
 			</div>
 			
 			<!-- 扩展资料显示区域显示框 -->
-			<div style="width:450px; height:290px;  float:right; ">
+			<div style="width:33.3%; height:290px;  float:right; ">
 				<!-- "关于我"显示区域 -->
-				<div style="display:none;">
+				<div style="display:;">
 					<div style="border-bottom:0.5px solid #eee;">
 						<p class="title" style="">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
@@ -317,7 +332,7 @@
 				
 				
 				<!-- "留言板"显示区域 -->
-				<div style="display:none;">
+				<div style="display:;">
 					<p class="title" style="">
 						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 						<span>写下你的留言，说不定我会回呢。</span>
@@ -331,7 +346,7 @@
 						<input type="text" class="form-control"  placeholder="你的网址" style="height:25px; width:200px;">
 					</div>
 					
-					<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:350px;"></textarea>
+					<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:300px;"></textarea>
 					
 					<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
 					
@@ -340,32 +355,60 @@
 				
 				
 				 <!-- "关注博主"显示区域 -->
-				 <div style="display: ;">
+				 <div style="display: ; ">
 					<div id="focus_box" style="">
 						<div id="focus_title_box" style="">
-							<span class="title" style="line-height:30px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
+							<span class="title" style="line-height:30px; padding-left:10px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
 						</div>
 						
 						<div id="focus_item_box" style="">
 							<div class="focus_list" style="">
-								<div class="focus_item" style=""></div>
+								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\qq.png" width="40px" height="40px" /></div>
 								<p class="fs1" style="padding-top:5px;">QQ</p>
 							</div>
 							<div class="focus_list" style="">
-								<div class="focus_item" style=""></div>
+								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weibo.png" width="40px" height="40px" /></div>
 								<p class="fs1" style="padding-top:5px;">微博</p>
 							</div>
 							<div class="focus_list" style="">
-								<div class="focus_item" style=""></div>
+								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\github.png" width="40px" height="40px" /></div>
 								<p class="fs1" style="padding-top:5px;">GitHub</p>
 							</div>
 							<div class="focus_list" style="">
-								<div class="focus_item" style=""></div>
+								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weixin.png" width="35px" height="35px" /></div>
 								<p class="fs1" style="padding-top:5px;">公众号</p>
 							</div>
 						</div>
-					</div>
 						
+						
+						<!-- 统计 显示区域 -->
+					
+						<div style="width:100%; height:50px; margin-top:20px; margin-bottom:5px;">
+							<div id="headimg" style="">
+								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\headimg2.jpg" style="border-radius:50px;" width="48px" height="48px" />
+							</div>
+						</div>
+						
+						<div style="width:100%; height:40px; text-align:center;">
+							<span class="fs1" style="line-height:20px; color:#337ab7">南国晚秋</span> <br />
+							<span class="fs1">头发旺盛的处女座程序员</span>
+						</div>
+						
+						<div style="width:100%; height:40px; margin-top:10px;">
+							<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
+								<span>11</span><br />
+								<span>全部访客</span>
+							</div>
+							<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
+								<span>320</span><br />
+								<span>文章</span>
+							</div>
+							<div class="fs1" style="width:33.33%; height:100%; float:left; text-align:center;">
+								<span>320</span><br />
+								<span>运行天数</span>
+							</div>
+						</div>
+					</div>
 				 </div>
 				
 			</div>
@@ -373,6 +416,8 @@
 		</div>
 		
 	</div>
+	
+	
 	
 	<!--blog最新文章显示界面-->
 	<div id="newBlogList" style="width:100%; height:800px; margin-bottom:100px;">
@@ -385,7 +430,7 @@
 			
 			<!-- 右边 -->
 			<div style="width:380px; height:100%; float:right;  padding:10px;">
-				<p>这是我的小功能，快捷操作的地方。</p>
+				<p></p>
 			</div>
 		</div>
 	</div>
