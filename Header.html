@@ -171,7 +171,7 @@
 	}
 	.top_box {
 		width:1100px; height:100%; margin:0 auto;  position:relative; 
-		/*border-bottom:0.5px solid #87CEFA ;  */
+		border-bottom:0.5px solid #87CEFA ;  
 		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/FanBlog_static/imgs/topimg.jpg) ;  */
 		background-repeat:round;
 		
@@ -273,7 +273,31 @@
 	}
 	
 	
+	/*文章列表部分样式*/
+	.blogItem {
+		width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc; border-radius:5px;
+		transition:all 0.5s ;
+	}
+	.blogItem:hover {
+		background-color:#eee;
+	}
 	
+	.blogimg {
+		width:30%; height:100%; float:left; padding-right:20px;
+		transition:all 1s;
+	}
+	.blogimg:hover {
+		transform:scale(1.1,1.1) ;
+	}
+	
+	.blogTitle {
+		font-size:15px; font-family:宋体; font-weight:bold; color:#337ab7;
+		transition:all 1s; 
+	}
+	.blogTitle:hover {
+		color:black;
+		text-decoration:underline ;
+	}
 </style>
 <script type="text/javascript">
 	$(function(){
@@ -479,79 +503,104 @@
 	
 	
 	<!--blog最新文章显示界面-->
-	<div style="width:1100px; height:800px; border-bottom:1px solid #ccc; margin:0 auto;">
+	<div style="width:1100px; height:800px; margin:0 auto;">
 		<!--左边-->
 		<div style="width:65%; height:100%;  float:left;">
-			<div style="width:100%; heigh:30px; border-bottom:1px solid #ccc;">
+			<div style="width:100%; heigh:30px; ">
 				<span style="line-height:30px; color:#337ab7;">最新文章</span>
 				<span style="line-height:30px; color:#aaa">New Article</span>
 			</div>
 			
 			<!-- 文章列表 -->
-			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
+			<div class="blogItem">
 				<!--文章图片-->
-				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
+				<div class="blogimg">
 					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
 				</div> 
 				<!-- 文章标题/预览 -->
 				<div style="width:70%; height:100%;  float:left; ">
 					<div style="width:100%; height:30px; ">
-						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+						<span class="blogTitle">这个秋天不一样，来北京的第一个秋天，有点冷</span>
 					</div>
 					<div style="width:100%; height:60px; ">
-						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+						<span style="line-height:1.5em; font-size:12px;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
 					</div>
 					<div style="width:100%; height:30px; ">
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+						<div style="float:right;"><span style=" font-size:12px; color:#FF7F50; line-height:30px;">Liinux</span></div>
+					</div>
+				</div>
+			</div>
+			<!-- 文章列表 -->
+			<div class="blogItem">
+				<!--文章图片-->
+				<div class="blogimg">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="100%" height="100%;"/>
+				</div> 
+				<!-- 文章标题/预览 -->
+				<div style="width:70%; height:100%;  float:left; ">
+					<div style="width:100%; height:30px; ">
+						<span class="blogTitle">今天来谈一谈今年新起的远程办公到底如何</span>
+					</div>
+					<div style="width:100%; height:60px; ">
+						<span style="line-height:1.5em; font-size:12px;">闪电发货时代峰峻搜你附近的所谓乳杆菌，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+					</div>
+					<div style="width:100%; height:30px; ">
+						<span style="font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+						<div style="float:right;"><span style=" font-size:12px; color:#FF7F50; line-height:30px;">Liinux</span></div>
+					</div>
+				</div>
+			</div>
+			<!-- 文章列表 -->
+			<div class="blogItem">
+				<!--文章图片-->
+				<div class="blogimg">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg2.jpeg" width="100%" height="100%;"/>
+				</div> 
+				<!-- 文章标题/预览 -->
+				<div style="width:70%; height:100%;  float:left; ">
+					<div style="width:100%; height:30px; ">
+						<span class="blogTitle">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+					</div>
+					<div style="width:100%; height:60px; ">
+						<span style="line-height:1.5em; font-size:12px;">第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+					</div>
+					<div style="width:100%; height:30px; ">
+						<span style="font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+						<div style="float:right;"><span style=" font-size:12px; color:#FF7F50; line-height:30px;">Liinux</span></div>
 					</div>
 				</div>
 			</div>
 			
 			<!-- 文章列表 -->
-			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
+			<div class="blogItem">
 				<!--文章图片-->
-				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
-					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
+				<div class="blogimg">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg4.jpg" width="100%" height="100%;"/>
 				</div> 
 				<!-- 文章标题/预览 -->
 				<div style="width:70%; height:100%;  float:left; ">
 					<div style="width:100%; height:30px; ">
-						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+						<span class="blogTitle">这个秋天不一样，来北京的第一个秋天，有点冷</span>
 					</div>
 					<div style="width:100%; height:60px; ">
-						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+						<span style="line-height:1.5em; font-size:12px;">今年是我来北京的第一个年头，第一次经历了北京的秋天。，在收款方式开飞机上开放时间恶如头儿突围和人家UI额无任何了十多个加咖啡个人同意玩而已。</span>
 					</div>
 					<div style="width:100%; height:30px; ">
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
 						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
-					</div>
-				</div>
-			</div>
-			
-			<!-- 文章列表 -->
-			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
-				<!--文章图片-->
-				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
-					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
-				</div> 
-				<!-- 文章标题/预览 -->
-				<div style="width:70%; height:100%;  float:left; ">
-					<div style="width:100%; height:30px; ">
-						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
-					</div>
-					<div style="width:100%; height:60px; ">
-						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
-					</div>
-					<div style="width:100%; height:30px; ">
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+						<div style="float:right;"><span style=" font-size:12px; color:#FF7F50; line-height:30px;">Liinux</span></div>
 					</div>
 				</div>
 			</div>
