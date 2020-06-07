@@ -93,25 +93,24 @@
 		font-weight: 700; 
 	}
 	#search {
-		width:60px; 
+		width:150px; 
 		height:25px; 
 		border:1px solid #ccc; 
-		border-radius:8px;
+		border-radius:5px;
 		transition:all 1s ;
 	}
 	#search:hover {
-		border:1px solid #aaa; 
-		width:150px;
-		border-radius:5px;
+		border:1px solid #00BFFF; 
+		box-shadow:0 0 1px #00BFFF; 
 	}
 	
 	#search:focus {
 		background:none;
 		outline:none;
 		border:0px;
-		border:1px solid #aaa;
+		border:1px solid #00BFFF; 
 		border-radisu:2px;
-		box-shadow:0 0 1px #aaa;
+		box-shadow:0 0 1px #00BFFF; 
 	}
 	
 	#logo {
@@ -172,7 +171,7 @@
 	.top_box {
 		width:1100px; height:100%; margin:0 auto;  position:relative; 
 		border-bottom:0.5px solid #87CEFA ;  
-		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/FanBlog_static/imgs/topimg.jpg) ;  */
+		background-image:url(file:///C|/Users/fanchaojian/Desktop/FanBlog_static/imgs/topimg15.jpg) ;  
 		background-repeat:round;
 		
 	}
@@ -274,12 +273,15 @@
 	
 	
 	/*文章列表部分样式*/
-	.blogItem {
+	.blogItem {   
+	
 		width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc; border-radius:5px;
 		transition:all 0.5s ;
 	}
 	.blogItem:hover {
-		background-color:#eee;
+		background-color:#F0FFFF;
+		border-bottom:1px solid #00BFFF ;
+		box-shadow:0 0 1px #00BFFF ;;
 	}
 	
 	.blogimg {
@@ -387,113 +389,117 @@
 			<!-- 扩展资料显示区域显示框 -->
 			<div style="width:35%; height:290px; padding-left:15px;  float:right; ">
 				<!-- "关于"显示区域 -->
-				<div id="owner_area" style="display:;">
-					<div style="border-bottom:0.5px solid #eee;">
-						<p class="title" style="">
-							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-							<span>站长简介</span>
-						</p>
-						<p class="fs0">昵称：南国晚秋</p>
-						<p class="fs0">职业：全栈开发工程师、Salesforce开发工程师</p>
-						<p class="fs0">邮箱：1948556024@qq.com</p>
-						<p class="fs0">籍贯：四川宜宾</p>
-						<p class="fs0">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
-						<p class="fs0">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
+				<div id="owner_area" style="width:100%; height:100%;">
+					<div id="" id="" style="display:;">
+						<div style="border-bottom:0.5px solid #eee;">
+							<p class="title" style="">
+								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
+								<span>站长简介</span>
+							</p>
+							<p class="fs0">昵称：南国晚秋</p>
+							<p class="fs0">职业：全栈开发工程师、Salesforce开发工程师</p>
+							<p class="fs0">邮箱：1948556024@qq.com</p>
+							<p class="fs0">籍贯：四川宜宾</p>
+							<p class="fs0">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
+							<p class="fs0">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
+						</div>
+						
+						<div>
+							<p class="title" style="">
+								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
+								<span>网站简介</span>
+							</p>
+							<p class="fs0">前端：CSS+HTML5+VUE</p>
+							<p class="fs0">后端：java/Struts2+Hibernate+Spring/MySql</p>
+						</div>
+						
+						<div id="showmore" class="fc2" style="padding-top:0;">查看更多...</div>
 					</div>
-					
-					<div>
-						<p class="title" style="">
-							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-							<span>网站简介</span>
-						</p>
-						<p class="fs0">前端：CSS+HTML5+VUE</p>
-						<p class="fs0">后端：java/Struts2+Hibernate+Spring/MySql</p>
-					</div>
-					
-					<div id="showmore" class="fc2" style="padding-top:0;">查看更多...</div>
 				</div>
 				
-				
 				<!-- "留言板"显示区域 -->
-				<div id="guestbook_area" style="margin-top:10px;">
-					<p class="title" style="">
-						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-						<span>写下你的留言，说不定我会回呢。</span>
-					</p>
-					
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="邮箱" style="height:25px; width:200px;">
+				<div id="guestbook_area" style="width:100%; height:100%;">
+					<div id="" style="margin-top:10px;">
+						<p class="title" style="">
+							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
+							<span>写下你的留言，说不定我会回呢。</span>
+						</p>
+						
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="邮箱" style="height:25px; width:200px;">
+						</div>
+						
+						<div class="form-group">
+							<input type="text" class="form-control"  placeholder="你的网址" style="height:25px; width:200px;">
+						</div>
+						
+						<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:300px;"></textarea>
+						
+						<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
+						
+						<div id="showmore" class="fc2">去留言板</div>
 					</div>
-					
-					<div class="form-group">
-						<input type="text" class="form-control"  placeholder="你的网址" style="height:25px; width:200px;">
-					</div>
-					
-					<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:300px;"></textarea>
-					
-					<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
-					
-					<div id="showmore" class="fc2">去留言板</div>
 				</div>
 				
 				
 				 <!-- "关注博主"显示区域 -->
-				 <div id="focus_area" style="display: ; ">
-					<div id="focus_box" style="">
-						<div id="focus_title_box" style="">
-							<span class="title" style="line-height:30px; padding-left:10px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
-						</div>
+				 <div id="focus_area" style="width:100%; height:100%; background-image: ; ">
+					 <div id="" style="display: ; ">
+						<div id="focus_box" style="">
+							<div id="focus_title_box" style="">
+								<span class="title" style="line-height:30px; padding-left:10px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
+							</div>
+							
+							<div id="focus_item_box" style="">
+								<div class="focus_list" style="">
+									<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\qq.png" width="40px" height="40px" /></div>
+									<p class="fs1" style="padding-top:5px;">QQ</p>
+								</div>
+								<div class="focus_list" style="">
+									<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weibo.png" width="40px" height="40px" /></div>
+									<p class="fs1" style="padding-top:5px;">微博</p>
+								</div>
+								<div class="focus_list" style="">
+									<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\github.png" width="40px" height="40px" /></div>
+									<p class="fs1" style="padding-top:5px;">GitHub</p>
+								</div>
+								<div class="focus_list" style="">
+									<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weixin.png" width="35px" height="35px" /></div>
+									<p class="fs1" style="padding-top:5px;">公众号</p>
+								</div>
+							</div>
+							
+							
+							<!-- 统计 显示区域 -->
 						
-						<div id="focus_item_box" style="">
-							<div class="focus_list" style="">
-								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\qq.png" width="40px" height="40px" /></div>
-								<p class="fs1" style="padding-top:5px;">QQ</p>
+							<div style="width:100%; height:50px; margin-top:20px; margin-bottom:5px;">
+								<div id="headimg" style="">
+									<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\headimg2.jpg" style="border-radius:50px;" width="48px" height="48px" />
+								</div>
 							</div>
-							<div class="focus_list" style="">
-								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weibo.png" width="40px" height="40px" /></div>
-								<p class="fs1" style="padding-top:5px;">微博</p>
+							
+							<div style="width:100%; height:40px; text-align:center;">
+								<span class="fs1" style="line-height:20px; color:#337ab7">南国晚秋</span> <br />
+								<span class="fs1">头发旺盛的处女座程序员</span>
 							</div>
-							<div class="focus_list" style="">
-								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\github.png" width="40px" height="40px" /></div>
-								<p class="fs1" style="padding-top:5px;">GitHub</p>
-							</div>
-							<div class="focus_list" style="">
-								<div class="focus_item" style=""><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\weixin.png" width="35px" height="35px" /></div>
-								<p class="fs1" style="padding-top:5px;">公众号</p>
-							</div>
-						</div>
-						
-						
-						<!-- 统计 显示区域 -->
-					
-						<div style="width:100%; height:50px; margin-top:20px; margin-bottom:5px;">
-							<div id="headimg" style="">
-								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\headimg2.jpg" style="border-radius:50px;" width="48px" height="48px" />
-							</div>
-						</div>
-						
-						<div style="width:100%; height:40px; text-align:center;">
-							<span class="fs1" style="line-height:20px; color:#337ab7">南国晚秋</span> <br />
-							<span class="fs1">头发旺盛的处女座程序员</span>
-						</div>
-						
-						<div style="width:100%; height:40px; margin-top:10px;">
-							<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
-								<span>11</span><br />
-								<span>全部访客</span>
-							</div>
-							<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
-								<span>320</span><br />
-								<span>文章</span>
-							</div>
-							<div class="fs1" style="width:33.33%; height:100%; float:left; text-align:center;">
-								<span>320</span><br />
-								<span>运行天数</span>
+							
+							<div style="width:100%; height:40px; margin-top:10px;">
+								<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
+									<span>11</span><br />
+									<span>全部访客</span>
+								</div>
+								<div class="fs1" style="width:33.33%; border-right:1px solid #ccc; height:100%; float:left; text-align:center;">
+									<span>320</span><br />
+									<span>文章</span>
+								</div>
+								<div class="fs1" style="width:33.33%; height:100%; float:left; text-align:center;">
+									<span>320</span><br />
+									<span>运行天数</span>
+								</div>
 							</div>
 						</div>
-					</div>
-				 </div>
-				
+					 </div>
+				</div>
 			</div>
 			
 		</div>
