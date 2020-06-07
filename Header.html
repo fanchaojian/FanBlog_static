@@ -12,6 +12,9 @@
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--引入jquery-->
+<script src="C:\Users\fanchaojian\Desktop\FanBlog_static\js\jquery\jquery.js"></script>
 </head>
 
 <style type="text/css" >
@@ -19,6 +22,7 @@
 	*{
 		margin:0px;
 		padding:0px;
+		
 	}
 	html,body {
 		margin:0 ;
@@ -75,7 +79,7 @@
 		border-bottom:0.5px solid #87CEFA ; 
 		box-shadow: 0px 0.5px 1px #87CEFA;
 	}
-
+	
 	
 	#tag {
 		float:left; width:40%; height:32px;
@@ -88,6 +92,28 @@
 		color:balck; 
 		font-weight: 700; 
 	}
+	#search {
+		width:60px; 
+		height:25px; 
+		border:1px solid #ccc; 
+		border-radius:8px;
+		transition:all 1s ;
+	}
+	#search:hover {
+		border:1px solid #aaa; 
+		width:150px;
+		border-radius:5px;
+	}
+	
+	#search:focus {
+		background:none;
+		outline:none;
+		border:0px;
+		border:1px solid #aaa;
+		border-radisu:2px;
+		box-shadow:0 0 1px #aaa;
+	}
+	
 	#logo {
 		border-radius:50%; 
 		width:20px; 
@@ -144,7 +170,8 @@
 		width:100%; height:290px;
 	}
 	.top_box {
-		width:1100px; height:100%; margin:0 auto;  position:relative; border-bottom:0.5px solid #87CEFA ; 
+		width:1100px; height:100%; margin:0 auto;  position:relative; 
+		/*border-bottom:0.5px solid #87CEFA ;  */
 		/*background-image:url(file:///C|/Users/fanchaojian/Desktop/FanBlog_static/imgs/topimg.jpg) ;  */
 		background-repeat:round;
 		
@@ -246,16 +273,48 @@
 	}
 	
 	
+	
 </style>
+<script type="text/javascript">
+	$(function(){
+		$("#focus_area").show()  ;
+		$("#guestbook_area").hide();
+		$("#owner_area").hide() ;
+		
+		$("#focus").click(function(){
+			$("#focus_area").show()  ;
+			$("#guestbook_area").hide();
+			$("#owner_area").hide() ;
+		}) ; 
+		
+		$("#guestbook").click(function(){
+			$("#focus_area").hide()  ;
+			$("#guestbook_area").show();
+			$("#owner_area").hide() ;
+		}) ; 
+		
+		$("#owner").click(function(){
+			$("#focus_area").hide()  ;
+			$("#guestbook_area").hide();
+			$("#owner_area").show() ;
+		}) ; 
+	});
+</script>
+
 <body >
 	<div id="header" class="header_box">
 		<div style="width:1100px; height:100%; margin:0 auto;">
 			<div id="tag">
-				
 				<div style="height:32px; float:left ;"><span>南国晚秋</span></div>
 				<div style="width:32px; height:32px; float:left; padding-top:4px;">
 					<img id="logo" src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\headimg.jpg" /> 
 				</div>
+				<div style="height:32px; float:right ;"><span>
+					<input type="text" id="search" name="search" style=""/>
+					<span><img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\search.png" width="25px" heigh="25px"/></span>
+				</span></div>
+					
+				
 			</div>
 			
 			<div id="menu">
@@ -293,18 +352,18 @@
 			<!--菜单显示位置-->
 			<div class="menu_box" style="">
 				<div style="padding-left:10px;">
-					<div id="focus" class="top_menu fw fc2">关注</div>
+					<div class="top_menu fw fc2"><span id="focus">关注</span></div>
 					<div class="top_menu_split">|</div>
-					<div id="guestbook" class="top_menu fw fc2">关于博主</div>
+					<div class="top_menu fw fc2"><span id="owner">关于博主</span></div>
 					<div class="top_menu_split">|</div>
-					<div id="owner" class="top_menu fw fc2">留言</div>
+					<div class="top_menu fw fc2"><span id="guestbook">留言</span></div>
 				</div>
 			</div>
 			
 			<!-- 扩展资料显示区域显示框 -->
-			<div style="width:33.3%; height:290px;  float:right; ">
-				<!-- "关于我"显示区域 -->
-				<div style="display:;">
+			<div style="width:35%; height:290px; padding-left:15px;  float:right; ">
+				<!-- "关于"显示区域 -->
+				<div id="owner_area" style="display:;">
 					<div style="border-bottom:0.5px solid #eee;">
 						<p class="title" style="">
 							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
@@ -332,7 +391,7 @@
 				
 				
 				<!-- "留言板"显示区域 -->
-				<div style="display:;">
+				<div id="guestbook_area" style="margin-top:10px;">
 					<p class="title" style="">
 						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 						<span>写下你的留言，说不定我会回呢。</span>
@@ -350,12 +409,12 @@
 					
 					<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
 					
-					<div id="showmore" class="fc2">留言板</div>
+					<div id="showmore" class="fc2">去留言板</div>
 				</div>
 				
 				
 				 <!-- "关注博主"显示区域 -->
-				 <div style="display: ; ">
+				 <div id="focus_area" style="display: ; ">
 					<div id="focus_box" style="">
 						<div id="focus_title_box" style="">
 							<span class="title" style="line-height:30px; padding-left:10px;">关注我<span style="color:#bbb;">&nbsp;Focus Me</span></span>
@@ -420,19 +479,98 @@
 	
 	
 	<!--blog最新文章显示界面-->
-	<div id="newBlogList" style="width:100%; height:800px; margin-bottom:100px;">
-		<!-- 外壳 -->
-		<div style="width:1100px; height:100%; margin:0 auto; ">
-			<!-- 左边 -->
-			<div style="width:715px; height:100%; float:left; border-right:1px solid #ccc; padding:10px;">
-				<p>这是我的右边主要的盒子，主要用来显示最新的博客文章刘</p>
+	<div style="width:1100px; height:800px; border-bottom:1px solid #ccc; margin:0 auto;">
+		<!--左边-->
+		<div style="width:65%; height:100%;  float:left;">
+			<div style="width:100%; heigh:30px; border-bottom:1px solid #ccc;">
+				<span style="line-height:30px; color:#337ab7;">最新文章</span>
+				<span style="line-height:30px; color:#aaa">New Article</span>
 			</div>
 			
-			<!-- 右边 -->
-			<div style="width:380px; height:100%; float:right;  padding:10px;">
-				<p></p>
+			<!-- 文章列表 -->
+			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
+				<!--文章图片-->
+				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
+				</div> 
+				<!-- 文章标题/预览 -->
+				<div style="width:70%; height:100%;  float:left; ">
+					<div style="width:100%; height:30px; ">
+						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+					</div>
+					<div style="width:100%; height:60px; ">
+						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+					</div>
+					<div style="width:100%; height:30px; ">
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+					</div>
+				</div>
 			</div>
+			
+			<!-- 文章列表 -->
+			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
+				<!--文章图片-->
+				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
+				</div> 
+				<!-- 文章标题/预览 -->
+				<div style="width:70%; height:100%;  float:left; ">
+					<div style="width:100%; height:30px; ">
+						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+					</div>
+					<div style="width:100%; height:60px; ">
+						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+					</div>
+					<div style="width:100%; height:30px; ">
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 文章列表 -->
+			<div style="width:100%; height:150px; padding:15px; margin-top:15px; border-bottom:1px solid #ccc;">
+				<!--文章图片-->
+				<div style="width:30%; height:100%; float:left; padding-right:20px; ">
+					<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\topimg3.jpg" width="100%" height="100%;"/>
+				</div> 
+				<!-- 文章标题/预览 -->
+				<div style="width:70%; height:100%;  float:left; ">
+					<div style="width:100%; height:30px; ">
+						<span style="font-size:16px; font-family:宋体; font-weight:bold; color:#337ab7;">这个秋天不一样，来北京的第一个秋天，有点冷</span>
+					</div>
+					<div style="width:100%; height:60px; ">
+						<span style="line-height:1.5em;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
+					</div>
+					<div style="width:100%; height:30px; ">
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
+						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+					</div>
+				</div>
+			</div>
+			
+
 		</div>
+		
+		<!--右边-->
+		<div style="width:35%; height:100%;  float:right; padding-left:15px;">
+			
+		
+		</div>
+	</div>
+	
+	
+	<!-- 脚注信息显示区域 -->
+	<div style="width:1100px; height:150px; margin:0 auto ; text-align:center;">
+		这是footer
+		
 	</div>
 </body>
 </html>
