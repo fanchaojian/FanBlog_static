@@ -13,6 +13,13 @@
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+
+<!--图标-->
+<link rel="stylesheet" href="C:\Users\fanchaojian\Desktop\FanBlog_static\iconFont\albaba_AntDesign0fficialIcons\iconfont.css"> 
+<!--表情-->
+<script src="C:\Users\fanchaojian\Desktop\FanBlog_static\expression\alibaba_ColinXu\iconfont.js"> </script>
+
+
 <!--引入jquery-->
 <script src="C:\Users\fanchaojian\Desktop\FanBlog_static\js\jquery\jquery.js"></script>
 </head>
@@ -235,6 +242,40 @@
 	.title {
 		color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;
 	}
+			/*表情框组件样式*/
+	.icon {
+	  width: 24px;
+	  height: 24px;
+	  fill: currentColor;
+	  overflow: hidden;
+	  margin:auto 0 ; 
+	  padding-top:3px;
+	  
+	}
+	.icon:hover {
+		transform:scale(1.1,1.1) ;
+	}
+
+	.box::-webkit-scrollbar {
+		display:none;
+	}
+
+	.expression {
+		list-style:none ;
+		margin:0;
+		padding:0  ;
+	}
+
+	.expression > li {
+		text-align:center;
+		position:inline;
+		float:left;
+		width:50px;
+		height:30px;
+		border:1px dashed #eee;
+		
+	}
+	
 	
 	
 	/*关注 组件 部分样式 */ 
@@ -305,6 +346,9 @@
 	.blogTitle:hover {
 		color:black;
 		text-decoration:underline ;
+	}
+	.circle_icon {
+		font-size:12px; color:#FF7F50; padding-right:3px; font-weight:bold; line-height:30px;
 	}
 	
 	
@@ -483,8 +527,267 @@
 						
 						<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:300px;"></textarea>
 						
+						<!--=======================================================-->
+						<!--表情-->
+						<div class="box" style="display:none; width:312px; height:130px; border:1px solid #ccc; border-radius:10px; overflow-y:scroll;  margin:0; padding:5px; background-color:white;">
+							<ul class="expression">
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--happy"></use>
+									</svg>
+									<title>[/开心]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--happy-1"></use>
+									</svg>
+									<title>[/开心1]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--happy-"></use>
+									</svg>
+									<title>[/开心3]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--smiling-"></use>
+									</svg>
+									<title>[/微笑2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--joy"></use>
+									</svg>
+									<title>[/笑哭]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--smirking"></use>
+									</svg>
+									<title>[/奸笑]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--smile-"></use>
+									</svg>
+									<title>[/笑2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--tongue"></use>
+									</svg>
+									<title>[/吐舌]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--flushed"></use>
+									</svg>
+									<title>[/懵B]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--wink"></use>
+									</svg>
+									<title>[/眨眼]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--astonished-"></use>
+									</svg>
+									<title>[/中毒]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--cool"></use>
+									</svg>
+									<title>[/酷]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--confused"></use>
+									</svg>
+									<title>[/迷茫]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--cool-"></use>
+									</svg>
+									<title>[/酷2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--dizzy"></use>
+									</svg>
+									<title>[/头晕]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--cry"></use>
+									</svg>
+									<title>[/哭]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--cry-"></use>
+									</svg>
+									<title>[/哭2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--angry"></use>
+									</svg>
+									<title>[/生气]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--injury"></use>
+									</svg>
+									<title>[/受伤]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--in-love"></use>
+									</svg>
+									<title>[/热恋]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--kiss-1"></use>
+									</svg>
+									<title>[/亲吻]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--mask"></use>
+									</svg>
+									<title>[/戴口罩]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--expressionless"></use>
+									</svg>
+									<title>[/无表情]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--neutral"></use>
+									</svg>
+									<title>[/无表情2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--mute"></use>
+									</svg>
+									<title>[/静音]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--sad"></use>
+									</svg>
+									<title>[/难过]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--sad-"></use>
+									</svg>
+									<title>[/难过2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--scared"></use>
+									</svg>
+									<title>[/害怕]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--secret"></use>
+									</svg>
+									<title>[/闭嘴]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--scared-"></use>
+									</svg>
+									<title>[/害怕2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--shocked"></use>
+									</svg>
+									<title>[/震惊2]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--sick"></use>
+									</svg>
+									<title>[/生病]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--smile"></use>
+									</svg>
+									<title>[/笑]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--sleeping"></use>
+									</svg>
+									<title>[/睡觉]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--smiling"></use>
+									</svg>
+									<title>[/眼红]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--sweat"></use>
+									</svg>
+									<title>[/流汗]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--surprised"></use>
+									</svg>
+									<title>[/震惊]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--thinking"></use>
+									</svg>
+									<title>[/思考]</title>
+								</li>
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--tired"></use>
+									</svg>
+									<title>[/疲惫]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--unamused"></use>
+									</svg>
+									<title>[/斜眼]</title>
+								</li>
+								
+								<li>
+									<svg class="icon">
+									  <use xlink:href="#icon--vomiting"></use>
+									</svg>
+									<title>[/呕吐]</title>
+								</li>
+							<ul>
+						</div>
+						<!--=======================================================-->
 						<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
-						
 						<div id="showmore" class="fc2">去留言板</div>
 					</div>
 				</div>
@@ -580,10 +883,10 @@
 						<span style="line-height:1.5em; font-size:12px;">今年是我来北京的第一个年头，第一次经历了北京的秋天。我和朋友去了故宫，在收款方式开飞机上开放时间恶如头儿突围和人家玩而已。</span>
 					</div>
 					<div style="width:100%; height:30px; ">
-						<span style="font-size:12px; color:#FF7F50; line-height:30px;">2020-06-07</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">南国晚秋</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">0</span>
-						<span style="padding-left:20px; font-size:12px; color:#FF7F50; line-height:30px;">294</span>
+						<span class="icon-time-circle iconfont circle_icon" ></span><span class="fs1" style="padding-right:20px;">2020-06-07</span>
+						<span class="icon-time-circle iconfont circle_icon" ></span><span class="fs1" style="padding-right:20px;">南国晚秋</span>
+						<span class="icon-time-circle iconfont circle_icon" ></span><span class="fs1" style="padding-right:20px;">0</span>
+						<span class="icon-time-circle iconfont circle_icon" ></span><span class="fs1" style="padding-right:20px; ">294</span>
 						<div style="float:right;"><span style=" font-size:12px; color:#FF7F50; line-height:30px;">Liinux</span></div>
 					</div>
 				</div>

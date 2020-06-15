@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="iconfont.js"></script>
+<title>表情测试</title>
+<style>
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  overflow: hidden;
+  margin:auto 0 ; 
+  padding-top:3px;
+  
+}
+.icon:hover {
+	transform:scale(1.1,1.1) ;
+}
+
+.box::-webkit-scrollbar {
+    display:none;
+}
+
+.expression {
+	list-style:none ;
+	margin:0;
+	padding:0  ;
+}
+
+.expression > li {
+	text-align:center;
+	position:inline;
+	float:left;
+	width:50px;
+	height:30px;
+	border:1px dashed #eee;
+	
+}
+
+.expression > li:hover {
+	
+}
+</style>
+
+</head>
+
+<style type="text/css" >
+	
+</style>
+<script type="text/javascript">
+	
+</script>
+
+<body style="width:100%; height:100%;">
+	<p>
+		这是我的表情
+		<svg class="icon">
+		  <use xlink:href="#icon--joy"></use>
+		</svg>
+		哈哈哈
+	</p>
+	<p>这是我的表情</p>
+	
+	<title>[/笑哭]</title>
+	<textarea style="width:300px; height:50px;" id="area"></textarea>
+	
+	<div class="box" style="width:312px; height:130px; border:1px solid #ccc; border-radius:10px; overflow-y:scroll;  margin:0; padding:5px;">
+		<ul class="expression">
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--happy"></use>
+				</svg>
+				<title>[/开心]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--happy-1"></use>
+				</svg>
+				<title>[/开心1]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--happy-"></use>
+				</svg>
+				<title>[/开心3]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--smiling-"></use>
+				</svg>
+				<title>[/微笑2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--joy"></use>
+				</svg>
+				<title>[/笑哭]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--smirking"></use>
+				</svg>
+				<title>[/奸笑]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--smile-"></use>
+				</svg>
+				<title>[/笑2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--tongue"></use>
+				</svg>
+				<title>[/吐舌]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--flushed"></use>
+				</svg>
+				<title>[/懵B]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--wink"></use>
+				</svg>
+				<title>[/眨眼]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--astonished-"></use>
+				</svg>
+				<title>[/中毒]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--cool"></use>
+				</svg>
+				<title>[/酷]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--confused"></use>
+				</svg>
+				<title>[/迷茫]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--cool-"></use>
+				</svg>
+				<title>[/酷2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--dizzy"></use>
+				</svg>
+				<title>[/头晕]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--cry"></use>
+				</svg>
+				<title>[/哭]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--cry-"></use>
+				</svg>
+				<title>[/哭2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--angry"></use>
+				</svg>
+				<title>[/生气]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--injury"></use>
+				</svg>
+				<title>[/受伤]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--in-love"></use>
+				</svg>
+				<title>[/热恋]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--kiss-1"></use>
+				</svg>
+				<title>[/亲吻]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--mask"></use>
+				</svg>
+				<title>[/戴口罩]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--expressionless"></use>
+				</svg>
+				<title>[/无表情]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--neutral"></use>
+				</svg>
+				<title>[/无表情2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--mute"></use>
+				</svg>
+				<title>[/静音]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--sad"></use>
+				</svg>
+				<title>[/难过]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--sad-"></use>
+				</svg>
+				<title>[/难过2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--scared"></use>
+				</svg>
+				<title>[/害怕]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--secret"></use>
+				</svg>
+				<title>[/闭嘴]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--scared-"></use>
+				</svg>
+				<title>[/害怕2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--shocked"></use>
+				</svg>
+				<title>[/震惊2]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--sick"></use>
+				</svg>
+				<title>[/生病]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--smile"></use>
+				</svg>
+				<title>[/笑]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--sleeping"></use>
+				</svg>
+				<title>[/睡觉]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--smiling"></use>
+				</svg>
+				<title>[/眼红]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--sweat"></use>
+				</svg>
+				<title>[/流汗]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--surprised"></use>
+				</svg>
+				<title>[/震惊]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--thinking"></use>
+				</svg>
+				<title>[/思考]</title>
+			</li>
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--tired"></use>
+				</svg>
+				<title>[/疲惫]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--unamused"></use>
+				</svg>
+				<title>[/斜眼]</title>
+			</li>
+			
+			<li>
+				<svg class="icon">
+				  <use xlink:href="#icon--vomiting"></use>
+				</svg>
+				<title>[/呕吐]</title>
+			</li>
+		<ul>
+	</div>
+</body>
+</html>
+
+
+
+
