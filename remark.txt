@@ -13,6 +13,23 @@
 	深天空蓝：#00BFFF
 	亮钢兰色：#B0C4DE
 		#CCCC99
+3.心情随笔背景颜色
+	浅玫瑰色  #FFE4E1
+	淡紫色	#E6E6FA
+	雪白色	#FFFAFA
+	米色	#F5F5DC
+	薄荷色	#F5FFFA
+	天蓝色	#F0FFFF
+	幽灵白	#F8F8FF
+
+	桔黄色	#FFE4C4
+	柠檬绸色	#FFFACD
+	亮金黄色	#FAFAD2
+	蜜色	#F0FFF0
+	亮青色	#E0FFFF
+	艾利斯兰	#F0F8FF
+	烟白色	#F5F5F5
+		CCFFFF
 2.快捷功能模块应该显示哪些功能？
 	A：关注我
 	B：流量统计
