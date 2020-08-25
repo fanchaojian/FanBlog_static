@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>留言板</title>
+<meta charset="utf-8">
+	
+	<!--引入jquery-->
+<script src="./js/jquery/jquery.js"></script>
+
+
+<!--图标-->
+<link rel="stylesheet" href="./iconFont/albaba_AntDesign0fficialIcons/iconfont.css"> 
+</head>
+
+<!--标签管理样式表-->
+<style type="text/css" >
+	p {
+		margin:0 ;
+		padding:0;
+	}
+
+	
+	
+	.myinput {
+		outline:0 ;
+		border:1px solid #ccc;
+		border-radius:5px;
+		caret-color:#FF7F50;
+	}
+	.myinput:focus{
+       outline:0; 
+	   border:1px solid #00BFFF;
+	   box-shadow:0 0 1px 2px #F0FFFF;
+    }
+
+	input::-webkit-input-placeholder { 
+		font-size:10px;
+		padding-left:10px;
+		color:#333;
+　　}
+
+	textarea::-webkit-input-placeholder { 
+		padding-left:8px;
+		font-size:10px;
+		color:#333;
+　　}
+	
+	.title {
+		 font-size:12px; 
+		 padding-top:5px;
+		 
+	}
+	
+	.mybtn {
+		width:120px;
+		height:25px;
+		background-color:#ffffff;
+		border-radius:5px;
+		border:1px solid #ccc;
+		color:#FF7F50; 
+	}
+	
+	.mybtn:hover {
+		color:#333;
+		box-shadow:0 0 1px 1px #ddd;
+	}
+</style>
+
+<!--JavaScript-->
+<script type="text/javascript">
+	$(function(){
+		
+	});
+</script>
+
+<body>
+	<div style="width:1100px; height:800px; margin:0 auto;">
+		<div style="width:70%; height:100%; float:left; border-right:1px solid #ccc; ">
+			<p style=" color:#337ab7;  padding-top:15px;">留言板
+				<span style="color:#aaa; padding-left:5px;">Guestbook</span>
+			</p>
+			
+			
+			<div id="" style="margin-top:10px;">
+				<p class="title" style="">
+					<span class="icon-edit iconfont "></span>
+					<span>来都来了，给个留言再走吧<^~^>。</span>
+				</p>
+				<div style="padding-top:10px; padding-bottom:10px;">
+					<input class="myinput" type="text" placeholder="邮箱" style="height:35px; width:250px;">
+					<span style="color:#FF7F50;line-height:35px; font-size:12px;">(必填)</span>
+				</div>
+				
+				<div style="padding-top:10px; padding-bottom:10px;">
+					<input class="myinput" type="text"  placeholder="你的昵称" style="height:35px; width:250px;">
+					<span style="color:#FF7F50;line-height:35px; font-size:12px;">(必填)</span>
+				</div>
+				
+				<div style="padding-top:10px; padding-bottom:10px;">
+					<textarea class="myinput" class="form-control" placeholder="说点什么吧" rows="5" style="width:400px;"></textarea>
+					
+				</div>
+				
+				<div style="paddint-top:10px; padding-bottom:10px;">
+					<p style="font-size:12px;">证明你不是机器人，谢谢。</p>
+					<span>12+9=</span> 
+					<input class="myinput" style="border-radius:4px; outline:null;" type="text" />
+				</div>
+				
+				<span><input style="vertical-align:middle; height:12px; width:12px;" type="checkbox" name="checkbox" /><label style="vertical-align:middle; font-size:12px;">邮件回复</label></span>
+				
+				<br />
+				<button type="button" class="mybtn" style="margin-top:10px;">提交留言</button>
+				
+			</div>
+		</div>
+	</div>
+
+
+</body>
+	
+</html>
