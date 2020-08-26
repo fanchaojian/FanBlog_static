@@ -26,11 +26,11 @@
 	*{
 		margin:0px;
 		padding:0px;
-		
 	}
 	html,body {
 		margin:0 ;
 		padding:0 ;
+		font-size:14px;
 	}
 	body {
 		width:100%; 
@@ -196,7 +196,7 @@
 	}
 	
 	.menu_box {
-		top: 64%; left:113px; width: 244px; height: 50px; position: absolute;
+		top: 52%; left:113px; width: 244px; height: 50px; position: absolute;
 	}
 	
 	.top_menu {
@@ -222,19 +222,7 @@
 		font-weight:700 ; 
 	}
 	
-	/*留言、关于 组件样式*/
-	input::-webkit-input-placeholder { 
-　　	color:#bbb;
-		font-size:10px;
-		
-　　}
-
-	textarea::-webkit-input-placeholder { 
-　　	color:#bbb;
-		font-size:10px;
-　　}
-	
-	
+	/*留言、关于博主 组件样式*/
 	
 	#showmore {
 		padding-top:10px;
@@ -251,59 +239,8 @@
 	}
 	
 	.title {
-		color:#337ab7; font-size:11px; font-weight:600; padding-top:5px;
+		color:#337ab7; font-size:12px; font-weight:600; padding-top:5px;
 	}
-			/*表情框组件样式*/
-	.icon {
-	  width: 24px;
-	  height: 24px;
-	  fill: currentColor;
-	  overflow: hidden;
-	  margin:auto 0 ; 
-	  padding-top:3px;
-	  
-	}
-	.icon:hover {
-		transform:scale(1.1,1.1) ;
-	}
-
-	.box::-webkit-scrollbar {
-		width: 4px;
-	}
-	
-	/*定义滚动条轨道 内阴影+圆角*/
-	.box::-webkit-scrollbar-track
-	{
-		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-		border-radius: 10px;
-		background-color: #ffffff;
-	}
-
-	/*定义滑块 内阴影+圆角*/
-	.box::-webkit-scrollbar-thumb
-	{
-		border-radius: 10px;
-		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-		background-color: #aaa;
-	}
-
-	.expression {
-		list-style:none ;
-		margin:0;
-		padding:0  ;
-	}
-
-	.expression > li {
-		text-align:center;
-		position:inline;
-		float:left;
-		width:40px;
-		height:30px;
-		border:1px dashed #eee;
-		
-	}
-	
-	
 	
 	/*关注 组件 部分样式 */ 
 	
@@ -435,24 +372,24 @@
 <script type="text/javascript">
 	$(function(){
 		$("#focus_area").show()  ;
-		$("#guestbook_area").hide();
+		$("#about_site").hide();
 		$("#owner_area").hide() ;
 		
 		$("#focus").click(function(){
 			$("#focus_area").show()  ;
-			$("#guestbook_area").hide();
+			$("#about_site").hide();
 			$("#owner_area").hide() ;
 		}) ; 
 		
 		$("#guestbook").click(function(){
 			$("#focus_area").hide()  ;
-			$("#guestbook_area").show();
+			$("#about_site").show();
 			$("#owner_area").hide() ;
 		}) ; 
 		
 		$("#owner").click(function(){
 			$("#focus_area").hide()  ;
-			$("#guestbook_area").hide();
+			$("#about_site").hide();
 			$("#owner_area").show() ;
 		}) ; 
 	});
@@ -502,7 +439,7 @@
 			
 			
 			<!--博客名称地址显示区域-->
-			<div style="left:123px; width:300px; top: 39%; position: absolute;">
+			<div style="left:123px; width:300px; top: 30%; position: absolute;">
 				<div class="ftf4" style="font-size: 24px; font-weight:300;">
 					<span>南国晚秋—BLOG</span>
 				</div>
@@ -517,7 +454,7 @@
 					<div class="top_menu_split">|</div>
 					<div class="top_menu fw fc2"><span id="owner">关于博主</span></div>
 					<div class="top_menu_split">|</div>
-					<div class="top_menu fw fc2"><span id="guestbook">留言</span></div>
+					<div class="top_menu fw fc2"><span id="guestbook">本站简介</span></div>
 				</div>
 			</div>
 			
@@ -526,314 +463,35 @@
 				<!-- "关于"显示区域 -->
 				<div id="owner_area" style="width:100%; height:100%;">
 					<div id="" id="" style="display:;">
-						<div style="border-bottom:0.5px solid #eee;">
+						<div>
 							<p class="title" style="">
 								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
 								<span>站长简介</span>
 							</p>
-							<p class="fs0">昵称：南国晚秋</p>
-							<p class="fs0">职业：全栈开发工程师、Salesforce开发工程师</p>
-							<p class="fs0">邮箱：1948556024@qq.com</p>
-							<p class="fs0">籍贯：四川宜宾</p>
-							<p class="fs0">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
-							<p class="fs0">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
+							<p class="fs1">昵称：南国晚秋</p>
+							<p class="fs1">职业：全栈开发工程师、Salesforce开发工程师</p>
+							<p class="fs1">邮箱：1948556024@qq.com</p>
+							<p class="fs1">籍贯：四川宜宾</p>
+							<p class="fs1">爱好：写字，拍照，IT数码，科技，玩游戏。</p>
+							<p class="fs1">格言：若成为一只小鸟，则无法知道雄鹰眼里的的天空。</p>
 						</div>
 						
-						<div>
-							<p class="title" style="">
-								<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-								<span>网站简介</span>
-							</p>
-							<p class="fs0">前端：CSS+HTML5+VUE</p>
-							<p class="fs0">后端：java/Struts2+Hibernate+Spring/MySql</p>
-						</div>
 						
 						<div id="showmore" class="fc2" style="padding-top:0;">查看更多...</div>
 					</div>
 				</div>
 				
-				<!-- "留言板"显示区域 -->
-				<div id="guestbook_area" style="width:100%; height:100%;">
-					<div id="" style="margin-top:10px;">
-						<p class="title" style="">
-							<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
-							<span>写下你的留言，说不定我会回呢。</span>
-						</p>
-						
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="邮箱" style="height:25px; width:200px;">
-						</div>
-						
-						<div class="form-group">
-							<input type="text" class="form-control"  placeholder="你的网址" style="height:25px; width:200px;">
-						</div>
-						
-						<textarea class="form-control" placeholder="说点什么吧" rows="3" style="width:300px;"></textarea>
-						
-						<!--=======================================================-->
-						<!--表情-->
-						<div class="box" style="display:; width:296px; height:130px; border:1px solid #ccc; border-radius:5px; overflow-y:scroll;  margin:0; padding:5px; background-color:white;">
-							<ul class="expression">
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--happy"></use>
-									</svg>
-									<title>[/开心]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--happy-1"></use>
-									</svg>
-									<title>[/开心1]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--happy-"></use>
-									</svg>
-									<title>[/开心3]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--smiling-"></use>
-									</svg>
-									<title>[/微笑2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--joy"></use>
-									</svg>
-									<title>[/笑哭]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--smirking"></use>
-									</svg>
-									<title>[/奸笑]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--smile-"></use>
-									</svg>
-									<title>[/笑2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--tongue"></use>
-									</svg>
-									<title>[/吐舌]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--flushed"></use>
-									</svg>
-									<title>[/懵B]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--wink"></use>
-									</svg>
-									<title>[/眨眼]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--astonished-"></use>
-									</svg>
-									<title>[/中毒]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--cool"></use>
-									</svg>
-									<title>[/酷]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--confused"></use>
-									</svg>
-									<title>[/迷茫]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--cool-"></use>
-									</svg>
-									<title>[/酷2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--dizzy"></use>
-									</svg>
-									<title>[/头晕]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--cry"></use>
-									</svg>
-									<title>[/哭]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--cry-"></use>
-									</svg>
-									<title>[/哭2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--angry"></use>
-									</svg>
-									<title>[/生气]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--injury"></use>
-									</svg>
-									<title>[/受伤]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--in-love"></use>
-									</svg>
-									<title>[/热恋]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--kiss-1"></use>
-									</svg>
-									<title>[/亲吻]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--mask"></use>
-									</svg>
-									<title>[/戴口罩]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--expressionless"></use>
-									</svg>
-									<title>[/无表情]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--neutral"></use>
-									</svg>
-									<title>[/无表情2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--mute"></use>
-									</svg>
-									<title>[/静音]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--sad"></use>
-									</svg>
-									<title>[/难过]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--sad-"></use>
-									</svg>
-									<title>[/难过2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--scared"></use>
-									</svg>
-									<title>[/害怕]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--secret"></use>
-									</svg>
-									<title>[/闭嘴]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--scared-"></use>
-									</svg>
-									<title>[/害怕2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--shocked"></use>
-									</svg>
-									<title>[/震惊2]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--sick"></use>
-									</svg>
-									<title>[/生病]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--smile"></use>
-									</svg>
-									<title>[/笑]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--sleeping"></use>
-									</svg>
-									<title>[/睡觉]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--smiling"></use>
-									</svg>
-									<title>[/眼红]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--sweat"></use>
-									</svg>
-									<title>[/流汗]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--surprised"></use>
-									</svg>
-									<title>[/震惊]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--thinking"></use>
-									</svg>
-									<title>[/思考]</title>
-								</li>
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--tired"></use>
-									</svg>
-									<title>[/疲惫]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--unamused"></use>
-									</svg>
-									<title>[/斜眼]</title>
-								</li>
-								
-								<li>
-									<svg class="icon">
-									  <use xlink:href="#icon--vomiting"></use>
-									</svg>
-									<title>[/呕吐]</title>
-								</li>
-							<ul>
-						</div>
-						<!--=======================================================-->
-						<button type="button" class="btn btn-success btn-xs" style="margin-top:10px;">提交留言</button>
-						<div id="showmore" class="fc2">去留言板</div>
-					</div>
+				<!-- "本站简介"显示区域 -->
+				<div id="about_site" style="width:100%; height:100%;">
+					<p class="title" style="">
+						<img src="C:\Users\fanchaojian\Desktop\FanBlog_static\imgs\introduce.png" width="12" height="12"/>
+						<span>网站简介</span>
+					</p>
+					<p class="fs1">前端：CSS+HTML5+VUE</p>
+					<p class="fs1">后端：java/Struts2+Hibernate+Spring/MySql</p>
+					<div id="showmore" class="fc2" style="padding-top:0;">查看更多...</div>
 				</div>
+				
 				
 				
 				 <!-- "关注博主"显示区域 -->
