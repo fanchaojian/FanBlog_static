@@ -3,6 +3,7 @@
 <title>文章归档</title>
 <meta charset="utf-8">
 	
+	
 	<!--引入jquery-->
 <script src="./js/jquery/jquery.js"></script>
 
@@ -21,7 +22,6 @@
 	.categorys_title {
 		height:40px; 
 		width:100%; 
-		padding-left:10px;
 		margin-top:20px;
 	}
 	
@@ -30,10 +30,10 @@
 		overflow:hidden;
 	}
 	.article_box_out {
-		width:33.33%; 
-		height:110px; 
+		width:100%; 
+		height:90px; 
 		float:left; 
-		padding:10px;
+		margin-bottom:15px;
 	}
 	.article_box_inner {
 		width:100%; 
@@ -53,14 +53,33 @@
 	}
 	
 	.article_title {
-		line-height:40px;
-		
+		font-size:14px; font-family:宋体; font-weight:bold; color:#337ab7;
+		transition:all 1s;
 	}
 	
 	.article_title:hover {
 		cursor:pointer;
+		color:black;
+		text-decoration:underline ;
+	}
+	.article_base_info {
+		font-size:12px;
+	}
+	.icon-like:hover {
 		color:#FF7F50;
-		text-decoration:underline; 
+	}
+	.article_base_info .iconfont {
+		font-size:12px;
+		color:#aaa;
+	}
+	
+	.article_img {
+		width:12%; height:100%; float:left;
+		transition:all 1s;
+	}
+	.article_img:hover {
+		transform:scale(1.05,1.05) ;
+		 -moz-transform:scale(1.1,1.1) ;
 	}
 </style>
 
@@ -72,7 +91,7 @@
 </script>
 
 <body>
-	<div style="width:1100px; margin:0 auto;">
+	<div style="width:750px; margin:0 auto;">
 		<p style=" color:#337ab7;  padding-top:15px;">
 			文章归档<span style="color:#aaa; padding-left:5px;">Archive</span>
 		</p>
@@ -86,51 +105,113 @@
 		<div class="article_list">
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/focusimg.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">愿你出走半生，归来任是少年这是文章的标题</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">0</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">294</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">121</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="article_box_out">
+				<div class="article_box_inner">
+					<div class="article_img">
+						<img src="./imgs/ggg.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">谢谢你，那个陪伴了我8年的女孩</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">721</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">76</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">3000</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="article_box_out">
+				<div class="article_box_inner">
+					<div class="article_img">
+						<img src="./imgs/hhh.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">给那些从来没有停止过努力的人</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">12</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">430</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">356</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="article_box_out">
+				<div class="article_box_inner">
+					<div class="article_img">
+						<img src="./imgs/topimg7.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">这个秋天有点温柔，想不想和我一起</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">123</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">90</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">498</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:#;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">愿你出走半生，归来任是少年</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
 			
 		</div>
 		
@@ -144,54 +225,113 @@
 		<div class="article_list">
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">第一次远门</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/introduce.png"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">愿你出走半生，归来任是少年这是文章的标题</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">0</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">294</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">121</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">故宫之旅</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/topimg8.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">谢谢你，那个陪伴了我8年的女孩</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">721</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">76</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">3000</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">给那些从来没有停止过努力的人</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/bbb.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">给那些从来没有停止过努力的人</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">12</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">430</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">356</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">凡是过往，皆为序章</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">看遍万千风景，唯有故乡才是熟睡的温床</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">生日快乐！那个陪伴了我8年的女孩</span></div>
-					<span style="font-size:14px; color:#FF4500;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/headimg.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">这个秋天有点温柔，想不想和我一起</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">123</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">90</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">498</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">相恋一百天</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
 		</div>
 		
 		<!--年份标题-->
@@ -204,54 +344,113 @@
 		<div class="article_list">
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">第一次远门</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/focusimg.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">愿你出走半生，归来任是少年这是文章的标题</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">0</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">294</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">121</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">故宫之旅</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/ggg.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">谢谢你，那个陪伴了我8年的女孩</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">721</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">76</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">3000</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">给那些从来没有停止过努力的人</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/hhh.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">给那些从来没有停止过努力的人</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">12</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">430</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">356</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="article_box_out">
 				<div class="article_box_inner">
-					<div><span class="article_title">凡是过往，皆为序章</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">看遍万千风景，唯有故乡才是熟睡的温床</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">生日快乐！那个陪伴了我8年的女孩</span></div>
-					<span style="font-size:14px; color:#FF4500;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
+					<div class="article_img">
+						<img src="./imgs/topimg7.jpg"width="100%" height="100%" />
+					</div>
+					
+					<div style="width:87%; height:100%; float:right; padding:5px 10px 5px 5px;">
+						<div style="height:40px;">
+							<span class="article_title">这个秋天有点温柔，想不想和我一起</span>
+						</div>
+						
+						<div class="article_base_info">
+							<span class="icon-time-circle iconfont " ></span>
+							<span style="padding-right:20px;">2020-06-07</span>
+								
+							<span class="icon-comment iconfont" ></span>
+							<span style="padding-right:20px;">123</span>
+								
+							<span class="icon-eye iconfont"></span>
+							<span style="padding-right:20px; ">90</span>
+							
+							<span class="icon-like iconfont"></span>
+							<span style="padding-right:20px;">498</span>
+						</div>
+					</div>
 				</div>
 			</div>
 			
-			<div class="article_box_out">
-				<div class="article_box_inner">
-					<div><span class="article_title">相恋一百天</span></div>
-					<span style="font-size:14px; color:;" class="iconfont icon-time-circle"></span>
-					<span style="font-size:14px;">2020-8-24 2:12:32</span>
-				</div>
-			</div>
 		</div>
 	</div>
 </body>
